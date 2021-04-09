@@ -1,0 +1,16 @@
+#Junk
+[Tt]humbs.db
+*.DS_Store
+
+#Specific Extensions
+*.exe
+*.pdb
+*.log
+*.lib
+
+#Directories
+amGame/Intermediate
+amGame/Saved
+amGame/DerivedDataCache
+amGame/.vs
+amGame/Binaries
