@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Rocks_Mesh.ma
-//Last modified: Sat, Apr 10, 2021 05:18:35 AM
+//Last modified: Sat, Apr 10, 2021 12:42:14 PM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.2";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "202004291615-7bd99f0972";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "UUID" "464CA40A-4683-4F7C-7401-81B2730F155C";
+fileInfo "UUID" "25BD1DDA-4F38-90E9-0947-BF8AD74BB707";
 createNode transform -s -n "persp";
 	rename -uid "6D507B7C-448E-96CB-D574-5EA2A68CB347";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -57.228146026506458 68.680829496364566 -66.801399026018558 ;
-	setAttr ".r" -type "double3" 689.66164744807975 -12741.399999983274 0 ;
+	setAttr ".t" -type "double3" -59.300635913595954 33.889310251434637 94.955269461099789 ;
+	setAttr ".r" -type "double3" 715.46164744873181 -12994.199999982737 -2.4034498419349279e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A0E9AC6F-4ACA-238A-3F1A-43A7E6BA0B8B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 104.50029519015939;
+	setAttr ".coi" 118.82133951469235;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -108,7 +108,7 @@ createNode mesh -n "Rock_GEOShape" -p "Rock_GEO";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 11 ".pt";
+	setAttr -s 9 ".pt";
 	setAttr ".pt[2]" -type "float3" -0.71661043 0.52032471 0.81119537 ;
 	setAttr ".pt[14]" -type "float3" -0.56427765 0.40971375 0.63875437 ;
 	setAttr ".pt[17]" -type "float3" -0.41380787 0.30046463 0.46842957 ;
@@ -211,9 +211,6 @@ createNode mesh -n "Rock_GEOShape" -p "Rock_GEO";
 createNode transform -n "Rock02_GEO" -p "Rocks_GEO";
 	rename -uid "BCB32EA4-4A99-870A-31EE-1094C0D16094";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 5 0 ;
-	setAttr ".rp" -type "double3" 0 -5 0 ;
-	setAttr ".sp" -type "double3" 0 -5 0 ;
 createNode mesh -n "Rock02_GEOShape" -p "Rock02_GEO";
 	rename -uid "59BB1214-4B6B-8CE8-C78B-96817AAEE2B6";
 	setAttr -k off ".v";
@@ -237,8 +234,10 @@ createNode mesh -n "Rock02_GEOShape" -p "Rock02_GEO";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 9 ".pt";
-	setAttr ".pt[9]" -type "float3" 1.0145159 0 0 ;
+	setAttr -s 32 ".pt[0:31]" -type "float3"  0 5 0 0 5 0 0 5 0 0 5 0 0 
+		5 0 0 5 0 0 5 0 0 5 0 0 5 0 1.0145159 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 
+		0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 5 0 0 
+		5 0 0 5 0;
 	setAttr -s 32 ".vt[0:31]"  -3.796597 -4.96797132 5.44981956 9.65663719 -4.85445595 6.77726173
 		 -4.38028526 3.38587761 5.62497425 4.54175997 -0.47017145 2.33961725 -6.58311319 4.99045372 -2.90902185
 		 5.74564457 1.79743767 -3.696208 -5.40006924 -4.96485043 -3.98980451 6.10291147 -4.9648509 -5
@@ -371,7 +370,7 @@ createNode mesh -n "Rock03_GEOShape" -p "Rock03_GEO";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 25 ".pt";
+	setAttr -s 2 ".pt";
 	setAttr ".pt[57]" -type "float3" 1.1920929e-07 3.5762787e-07 0 ;
 	setAttr ".pt[77]" -type "float3" 1.1920929e-07 3.5762787e-07 0 ;
 	setAttr -s 85 ".vt[0:84]"  -6.11346626 0 2.90755796 4.047755241 0 5.09919405
@@ -602,9 +601,6 @@ createNode mesh -n "Rock03_GEOShape" -p "Rock03_GEO";
 createNode transform -n "StalagRock_GEO" -p "Rocks_GEO";
 	rename -uid "8D6EB1AF-4790-24C5-AF26-819457ABBB2A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 10.278169223200306 0 ;
-	setAttr ".rp" -type "double3" 0 -10.278169223200306 0 ;
-	setAttr ".sp" -type "double3" 0 -10.278169223200306 0 ;
 createNode mesh -n "StalagRock_GEOShape" -p "StalagRock_GEO";
 	rename -uid "602A94D0-4D39-C489-2F3B-BD97FEEB8B33";
 	setAttr -k off ".v";
@@ -673,23 +669,44 @@ createNode mesh -n "StalagRock_GEOShape" -p "StalagRock_GEO";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 30 ".pt";
-	setAttr ".pt[145]" -type "float3" 0.0098925829 -0.0019987267 -0.00078105927 ;
-	setAttr ".pt[146]" -type "float3" 0.00072991848 -0.059554882 -3.7789345e-05 ;
-	setAttr ".pt[147]" -type "float3" 0.00078396499 -0.057998486 -6.2465668e-05 ;
-	setAttr ".pt[148]" -type "float3" 0.00049939752 -0.060594387 -2.5987625e-05 ;
-	setAttr ".pt[149]" -type "float3" 0.013205051 0.018371757 -0.0010430515 ;
-	setAttr ".pt[150]" -type "float3" 0.00053155422 -0.060439892 -2.7701259e-05 ;
-	setAttr ".pt[151]" -type "float3" 0.0087863803 -0.0088060535 -0.00069320202 ;
-	setAttr ".pt[152]" -type "float3" 2.7239323e-05 -0.062698193 -1.6093254e-06 ;
-	setAttr ".pt[153]" -type "float3" -0.00078614056 -0.067638226 6.2704086e-05 ;
-	setAttr ".pt[154]" -type "float3" -0.00050367415 -0.065044232 2.5987625e-05 ;
-	setAttr ".pt[155]" -type "float3" -0.0098958015 -0.12363799 0.00078105927 ;
-	setAttr ".pt[156]" -type "float3" -0.00073474646 -0.066081829 3.7789345e-05 ;
-	setAttr ".pt[157]" -type "float3" -0.013203621 -0.14397603 0.0010429174 ;
-	setAttr ".pt[158]" -type "float3" -0.00052857399 -0.06516058 2.7433038e-05 ;
-	setAttr ".pt[159]" -type "float3" -2.3186207e-05 -0.062913723 1.3113022e-06 ;
-	setAttr ".pt[160]" -type "float3" -0.0087832212 -0.11680587 0.00069391727 ;
+	setAttr -s 201 ".pt";
+	setAttr ".pt[0:165]" -type "float3"  0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0.0098925829 
+		10.276171 -0.00078105927 0.00072991848 10.218615 -3.7789345e-05 0.00078396499 10.220171 
+		-6.2465668e-05 0.00049939752 10.217575 -2.5987625e-05 0.013205051 10.296541 -0.0010430515 
+		0.00053155422 10.21773 -2.7701259e-05 0.0087863803 10.269363 -0.00069320202 2.7239323e-05 
+		10.215471 -1.6093254e-06 -0.00078614056 10.210531 6.2704086e-05 -0.00050367415 10.213125 
+		2.5987625e-05 -0.0098958015 10.154531 0.00078105927 -0.00073474646 10.212088 3.7789345e-05 
+		-0.013203621 10.134193 0.0010429174 -0.00052857399 10.213009 2.7433038e-05 -2.3186207e-05 
+		10.215256 1.3113022e-06 -0.0087832212 10.161364 0.00069391727 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0;
+	setAttr ".pt[166:200]" 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 
+		0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 
+		0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 
+		10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0 0 10.27817 0;
 	setAttr -s 201 ".vt";
 	setAttr ".vt[0:165]"  3.37987685 -10.27816963 -3.37987781 -3.5039309e-07 -10.27816963 -4.77986908
 		 -3.37987804 -10.27816963 -3.37987781 -4.77986908 -10.27816963 -5.0101328e-08 -3.37987804 -10.27816963 3.37987757
@@ -1355,9 +1372,6 @@ createNode mesh -n "StalagRock02_GEOShape" -p "StalagRock02_GEO";
 createNode transform -n "StalagRock03_GEO" -p "Rocks_GEO";
 	rename -uid "0E969613-4EE4-38F4-827C-EBB1466A96F3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 14.522136688232422 0 ;
-	setAttr ".rp" -type "double3" 0 -14.522136688232422 0 ;
-	setAttr ".sp" -type "double3" 0 -14.522136688232422 0 ;
 createNode mesh -n "StalagRock03_GEOShape" -p "StalagRock03_GEO";
 	rename -uid "D5262A1A-4C8B-2D08-C623-91831A5B75B0";
 	setAttr -k off ".v";
@@ -1386,6 +1400,13 @@ createNode mesh -n "StalagRock03_GEOShape" -p "StalagRock03_GEO";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 33 ".pt[0:32]" -type "float3"  0 14.522137 0 0 14.522137 
+		0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 
+		0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 
+		0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 
+		0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 
+		0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 0 0 14.522137 
+		0 0 14.522137 0;
 	setAttr -s 33 ".vt[0:32]"  0.70710444 -5.84616756 -0.70710689 -3.1134596e-06 -5.84616756 -1
 		 -0.70710897 -5.84616756 -0.70710689 -1.000000596046 -5.84616756 -1.1437946e-06 -0.70710897 -5.84616756 0.70710653
 		 -3.1134596e-06 -5.84616756 0.99999976 0.7071045 -5.84616756 0.70710659 0.99999774 -5.84616756 -1.1437946e-06
@@ -1477,9 +1498,6 @@ createNode mesh -n "StalagRock03_GEOShape" -p "StalagRock03_GEO";
 createNode transform -n "StalagRock04_GEO" -p "Rocks_GEO";
 	rename -uid "72EFFF2E-4E6F-45EA-F6B7-DC88DA1C7496";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.8886477411211899e-08 14.522136688232422 9.7530308273974242e-09 ;
-	setAttr ".rp" -type "double3" -6.8886477411211899e-08 -14.522136688232422 -9.7530308273974242e-09 ;
-	setAttr ".sp" -type "double3" -6.8886477411211899e-08 -14.522136688232422 -9.7530308273974242e-09 ;
 createNode mesh -n "StalagRock04_GEOShape" -p "StalagRock04_GEO";
 	rename -uid "F0D5B2F3-4FCC-0A57-DCBE-4CAC0AD219D9";
 	setAttr -k off ".v";
@@ -1513,6 +1531,28 @@ createNode mesh -n "StalagRock04_GEOShape" -p "StalagRock04_GEO";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 49 ".pt[0:48]" -type "float3"  6.8886479e-08 14.522137 9.7530304e-09 
+		6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 
+		14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 
+		9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 
+		6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 
+		14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 
+		9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 
+		6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 
+		14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 
+		9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 
+		6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 
+		14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 
+		9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 
+		6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 
+		14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 
+		9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 
+		6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 
+		14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 
+		9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 
+		6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 
+		14.522137 9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09 6.8886479e-08 14.522137 
+		9.7530304e-09 6.8886479e-08 14.522137 9.7530304e-09;
 	setAttr -s 49 ".vt[0:48]"  0.0085220039 -7.57629204 -0.46749732 -0.27177325 -7.57629204 -0.58359867
 		 -0.55206758 -7.57629204 -0.46749732 -0.66816932 -7.57629204 -0.18720248 -0.55206758 -7.57629204 0.093092501
 		 -0.27177325 -7.57629204 0.20919453 0.0085220337 -7.57629204 0.093092531 0.12462407 -7.57629204 -0.18720248
@@ -1642,19 +1682,19 @@ createNode mesh -n "StalagRock04_GEOShape" -p "StalagRock04_GEO";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D53AF962-46E9-9D92-36A1-CEA12873F954";
+	rename -uid "14A03BD8-47A2-5073-3BA1-86BF7AB5AA9B";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "BB33BCEE-4F48-CA39-D1CD-95A2220FFB6E";
+	rename -uid "18459A7C-4C4C-58F5-24D9-6A9E6A5593BA";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "878878E2-4122-4C66-C6EF-BB87D04300CD";
+	rename -uid "017FA5EA-4BA7-72CE-F7C6-6C9D0B3CD80B";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "BB329151-4C13-1B54-E533-8E8D336AE0D2";
+	rename -uid "AB8EAFAB-4E5B-658B-F8AC-EDBF955B918C";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "1F96AEDF-4661-83A4-E60E-EFAF65E185B5";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "69F25E72-461E-5F28-617B-33B293407E88";
+	rename -uid "A2C4A466-485B-87D1-636E-DFA6BD92EEE5";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "D8568933-4826-D52E-8EC1-B8A6ACECCB4F";
 	setAttr ".g" yes;
@@ -1736,8 +1776,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
